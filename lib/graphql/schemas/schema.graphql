@@ -1,0 +1,108 @@
+extend type Mutation {
+    "Load generated products and tags"
+    loadProductsAndTags(
+        "Mutation input"
+        input: LoadDataInput
+    ): LoadProductsAndTagsPayload!
+
+    "Load generated orders"
+    loadOrders(
+        "Mutation input"
+        input: LoadOrdersInput
+    ): LoadOrdersPayload!
+
+    "Load product images"
+    loadProductImages(
+        "Mutation input"
+        input: LoadProductImagesInput
+    ): LoadProductImagesPayload!
+
+    "Remove all products, tags and orders from the database"
+    removeAllData(
+        "Mutation input"
+        input: RemoveDataInput
+    ): RemoveDataPayload!
+}
+
+"Input for the `loadData` mutation"
+input LoadDataInput {
+    "An optional string identifying the mutation call, which will be returned in the response payload"
+    clientMutationId: String
+
+    "The shop ID"
+    shopId: String!
+
+    "The desired count of products to reach in the database"
+    desiredProductCount: Int!
+
+    "The desired count of tags to reach in the database"
+    desiredTagCount: Int!
+}
+
+input LoadOrdersInput {
+    "An optional string identifying the mutation call, which will be returned in the response payload"
+    clientMutationId: String
+
+    "The shop ID"
+    shopId: String!
+
+    "The desired count of orders to reach in the database"
+    desiredOrderCount: Int!
+}
+
+input LoadProductImagesInput {
+    "An optional string identifying the mutation call, which will be returned in the response payload"
+    clientMutationId: String
+
+    "The shop ID"
+    shopId: String!
+
+    "Where to get the images from"
+    source: String!
+}
+
+input RemoveDataInput {
+    "An optional string identifying the mutation call, which will be returned in the response payload"
+    clientMutationId: String
+
+    "The shop ID"
+    shopId: String!
+}
+
+"Response for the `loadProductImages` mutation"
+type LoadProductImagesPayload {
+    "The same string you sent with the mutation params, for matching mutation calls with their responses"
+    clientMutationId: String
+
+    "Whether data was loaded or not"
+    wasDataLoaded: Boolean!
+}
+
+"Response from the `removeAllData` mutation"
+type RemoveDataPayload {
+    "The same string you sent with the mutation params, for matching mutation calls with their responses"
+    clientMutationId: String
+
+    wasDataRemoved: Boolean!
+}
+
+"Response for the `loadProductsAndTags` mutation"
+type LoadProductsAndTagsPayload {
+    "The same string you sent with the mutation params, for matching mutation calls with their responses"
+    clientMutationId: String
+
+    "The number of products created"
+    productsCreated: Int!
+
+    "The number of tags created"
+    tagsCreated: Int!
+}
+
+"Response for the `loadProductsAndTags` mutation"
+type LoadOrdersPayload {
+    "The same string you sent with the mutation params, for matching mutation calls with their responses"
+    clientMutationId: String
+
+    "The number of orders created"
+    ordersCreated: Int!
+}
