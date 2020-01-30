@@ -24,6 +24,8 @@ await registerDummyData(app);
 
 Once the plugin is registered, you get access to the following GraphQL mutations. Call these from the GraphQL Playground at http://localhost:3000/graphql.
 
+As you can see in the example variables, there is no need to encode the `shopId`. This is a developer tool, and we want to keep things straightforward.
+
 ### Create tags and products:
 
 ```graphql
