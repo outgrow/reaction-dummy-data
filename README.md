@@ -90,6 +90,8 @@ Call with the following variables:
 
 ### Remove all data (armageddon)
 
+Beware: this will erase the content of the `Products`, `Catalog`, `Tags` and `Orders` collections!
+
 ```graphql 
 mutation removeAllData($input: RemoveDataInput!) {
     removeAllData(input: $input) {
