@@ -26,7 +26,7 @@ Once the plugin is registered, you get access to the following GraphQL mutations
 
 As you can see in the example variables, there is no need to encode the `shopId`. This is a developer tool, and we want to keep things straightforward.
 
-### Create tags and products:
+### Create tags and products
 
 ```graphql
 mutation loadProductsAndTags($input: LoadProductsAndTagsInput!) {
