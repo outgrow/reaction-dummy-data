@@ -2,7 +2,7 @@ extend type Mutation {
     "Load generated products and tags"
     loadProductsAndTags(
         "Mutation input"
-        input: LoadDataInput
+        input: LoadProductsAndTagsInput
     ): LoadProductsAndTagsPayload!
 
     "Load generated orders"
@@ -24,8 +24,8 @@ extend type Mutation {
     ): RemoveDataPayload!
 }
 
-"Input for the `loadData` mutation"
-input LoadDataInput {
+"Input for the `loadProductsAndTags` mutation"
+input LoadProductsAndTagsInput {
     "An optional string identifying the mutation call, which will be returned in the response payload"
     clientMutationId: String
 
@@ -56,9 +56,6 @@ input LoadProductImagesInput {
 
     "The shop ID"
     shopId: String!
-
-    "Where to get the images from"
-    source: String!
 }
 
 input RemoveDataInput {
