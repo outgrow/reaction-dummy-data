@@ -7,13 +7,13 @@ Generates dummy data (products, tags & orders) for Reaction Commerce.
 First, install the package in your project's `reaction` (API) directory:
 
 ```bash
-npm install --save-dev @outgrow/reaction-dummy-data
+npm install --save-dev @outgrowio/reaction-dummy-data
 ```
 
 Then, register the plugin in your project's `reaction/src/registerPlugins.js`, calling the function at the end of the file:
 
 ```js
-import registerDummyData from "@outgrow/reaction-dummy-data/index.js";
+import registerDummyData from "@outgrowio/reaction-dummy-data/index.js";
 
 // Built-in plugin register calls go here
 
