@@ -1,5 +1,7 @@
 # reaction-dummy-data
 
+[![npm (scoped)](https://img.shields.io/npm/v/@outgrowio/reaction-dummy-data.svg)](https://www.npmjs.com/package/@outgrowio/reaction-dummy-data)
+
 Generates dummy data (products, tags & orders) for Reaction Commerce.
 
 ## How to use
@@ -19,6 +21,10 @@ import registerDummyData from "@outgrowio/reaction-dummy-data/index.js";
 
 await registerDummyData(app);
 ```
+
+## User interface
+
+If you prefer to have a user interface in your `reaction-admin` rather than making GraphQL calls manually, use this plugin together with [`reaction-dummy-data-ui`](https://github.com/outgrow/reaction-dummy-data-ui).
 
 ## GraphQL API
 
