@@ -1,5 +1,5 @@
 {
-  "name": "@outgrow/reaction-dummy-data",
+  "name": "@outgrowio/reaction-dummy-data",
   "description": "Generates dummy data for Reaction Commerce",
   "version": "0.1.0",
   "main": "index.js",
