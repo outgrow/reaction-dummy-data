@@ -12,15 +12,16 @@ First, install the package in your project's `reaction` (API) directory:
 npm install --save-dev @outgrowio/reaction-dummy-data
 ```
 
-Then, register the plugin in your project's `reaction/src/registerPlugins.js`, calling the function at the end of the file:
+Then, register the plugin in your project's `reaction/plugins.json`:
 
-```js
-import registerDummyData from "@outgrowio/reaction-dummy-data/index.js";
-
-// Built-in plugin register calls go here
-
-await registerDummyData(app);
+```json
+{
+  ...,
+  "dummyData": "@outgrowio/reaction-dummy-data/index.js"
+}
 ```
+
+With the plugin registered, restart your API container to finalize the installation.
 
 ## User interface
 
