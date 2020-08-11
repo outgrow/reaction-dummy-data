@@ -38,7 +38,7 @@
     "graphql-fields": "^2.0.3",
     "graphql-relay": "^0.6.0",
     "buffer-stream-reader": "^0.1.1",
-    "jpeg-js": "^0.3.3",
+    "jpeg-js": "^0.4.1",
     "node-fetch": "^2.3.0",
     "random-puppy": "^1.1.0",
     "faker": "^4.1.0"
